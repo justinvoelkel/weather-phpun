@@ -1,29 +1,15 @@
-# Foundation libsass template
+# Weather PHPun
 
-This is a template to start your own project that uses Grunt and libsass!
+Just a simple angularjs app to interact with the Open Weather API. Meant to work in conjunction with a PHP driven persistence layer to allow profiles, saving searches, etc.
 
-## Requirements
+## Technical Things Included
+ * AngularJS 1.3.15
+ * Foundation 5 from Zurb
+    * SASS driven CSS
+    * Grunt CLI Task Runner
 
-You'll need to have the following items installed before continuing.
-
-  * [Node.js](http://nodejs.org): Use the installer provided on the NodeJS website.
-  * [Grunt](http://gruntjs.com/): Run `[sudo] npm install -g grunt-cli`
-  * [Bower](http://bower.io): Run `[sudo] npm install -g bower`
-
-## Quickstart
-
-```bash
-git clone git@github.com:zurb/foundation-libsass-template.git
-npm install && bower install
-```
-
-While you're working on your project, run:
-
-`grunt`
-
-And you're set!
-
-## Directory Structure
-
-  * `scss/_settings.scss`: Foundation configuration settings go in here
-  * `scss/app.scss`: Application styles go here
+## TODO
+ * Add PHP micro framework for login and search saves`
+ * Clean up jquery transitions
+ * Clean up extended forecast styles (5day)
+ 
