@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-
-</body>
-</html>
+<div id="multiple" class="row" ng-show="multiple">
+    <div class="panel medium-4 columns medium-offset-4">
+        <h3>Wait, did you mean:</h3>
+        <ul>
+            <li ng-repeat="location in multiple">
+                <a href ng-click="fireSearch(location)">{{location}}</a>
+            </li>
+        </ul>
+    </div>
+</div>

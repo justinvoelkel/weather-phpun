@@ -1,10 +1,34 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+<div id="results" class="row" ng-show="!multiple;result">
 
-</body>
-</html>
+    <div class="panel medium-4 columns text-center" ng-show="!result.list">
+        <h3>Current Conditions:</h3>
+        <div id="temp" class="small-12 columns">
+            <h2>{{result.main.temp | number:0}}&deg; <small>{{result.weather[0].main}}</small></h2>
+            <p>{{result.weather[0].description}}</p>
+        </div>
+        <div class="small-12 columns">
+            <ul>
+                <li>Humidity: {{result.main.humidity | number:0}}%</li>
+                <li>Wind: {{result.wind.speed | number:0}} mph</li>
+                <li>Sunrise: {{result.sys.sunrise | date:'HH:mm'}} am</li>
+                <li>Sunset: {{result.sys.sunset | date:'HH:mm'}} pm</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="row" ng-show="result.list">
+    <div ng-repeat="result in result.list" class="panel medium-3 columns text-center" ng-class="{end: $last}">
+        <!--holy epoch time---wtf-->
+        <h4>{{result.dt * 1000 | date:'MM/dd/yyyy'}}</h4>
+        <div class="medium-12 columns">
+            <h2>{{result.temp.day | number:0}}&deg; <small>{{result.weather[0].main}}</small></h2>
+            <p>{{result.weather[0].description}}</p>
+        </div>
+        <div class="medium-12 columns">
+            <ul>
+                <li>Humidity: {{result.humidity | number:0}}%</li>
+                <li>Wind: {{result.speed | number:0}} mph</li>
+            </ul>
+        </div>
+    </div>
+</div>
