@@ -9,7 +9,7 @@ Just a simple angularjs app to interact with the Open Weather API. Meant to work
     * Grunt CLI Task Runner
 
 ## TODO
- * Add PHP micro framework for login and search saves`
+ * Add PHP micro framework for login and search saves
  * Clean up jquery transitions
  * Clean up extended forecast styles (5day)
  
