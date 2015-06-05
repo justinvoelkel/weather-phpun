@@ -45,7 +45,15 @@ body{
   background-position: center;
   background-size: cover;
 }
-
+#search-panel{
+  background: $gray75;
+  label{
+    color: $white;
+  }
+}
+#results, #multiple{
+  margin-top: 1rem;
+}
 #navigation {
   .top-bar {
     background: transparent;
